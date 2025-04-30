@@ -23,39 +23,31 @@ async function UsersPage() {
 	const usersJSX = users.map((user: User) => {
 		return (
 			<tr key={user.id}>
-				<td>{user.id}</td>
-				<td>
+				<td className="border border-slate-300">{user.id}</td>
+				<td className="border border-slate-300">
 					<Link href={`/users/${user.id}`} key={user.id}>
 						{user.name}
 					</Link>
 				</td>
 
-				<td>{user.email}</td>
-				<td>{user.phone}</td>
-				<td>{user.website}</td>
-				<td>{user?.company?.name}</td>
+				<td className="border border-slate-300">{user.email}</td>
+				<td className="border border-slate-300">{user.phone}</td>
+				<td className="border border-slate-300">{user.website}</td>
+				<td className="border border-slate-300">{user?.company?.name}</td>
 			</tr>
 		);
 	});
 	return (
-		<div
-			style={{
-				display: "flex",
-				justifyContent: "center",
-				alignContent: "center",
-				flexDirection: "column",
-				backgroundColor: "white",
-			}}
-		>
-			<table style={{ width: "100%", textAlign: "center" }}>
+		<div className="bg-white rounded-lg max-4 p-4">
+			<table className="border-separate border-spacing-2 border border-slate-400">
 				<thead>
 					<tr>
-						<th>ID</th>
-						<th>Name</th>
-						<th>Email</th>
-						<th>Phone</th>
-						<th>Website</th>
-						<th>Company</th>
+						<th className="border border-slate-300">ID</th>
+						<th className="border border-slate-300">Name</th>
+						<th className="border border-slate-300">Email</th>
+						<th className="border border-slate-300">Phone</th>
+						<th className="border border-slate-300">Website</th>
+						<th className="border border-slate-300">Company</th>
 					</tr>
 				</thead>
 				<tbody>{usersJSX}</tbody>

@@ -28,17 +28,8 @@ async function UserDetails({ params }: { params: UserParams }) {
 
 	const user: User = await response.json();
 
-	const cardStyle: React.CSSProperties = {
-		width: "100%",
-		padding: "10px",
-		borderRadius: "10px",
-		color: "black",
-		marginTop: "20px",
-		background: "white",
-	};
-
 	return (
-		<div style={cardStyle}>
+		<div>
 			<p>
 				<strong>Name:</strong> {user.name}
 			</p>

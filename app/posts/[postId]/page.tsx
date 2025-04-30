@@ -9,18 +9,14 @@ type Props = {
 	params: PostParams;
 };
 
-const titleStyle: React.CSSProperties = {
-	color: "white",
-};
-
-const loadingFallback = <div style={titleStyle}>Loading ...</div>;
+const loadingFallback = <div>Loading ...</div>;
 
 export default async function PostDetails({ params }: Props) {
 	const { postId } = params;
 
 	return (
 		<div>
-			<h1 style={titleStyle}>Post Details</h1>
+			<h1>Post Details</h1>
 			<Suspense fallback={loadingFallback}>
 				<Post postId={postId} />
 			</Suspense>
