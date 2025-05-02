@@ -4,7 +4,7 @@ import type React from "react";
 import { useContext } from "react";
 import MainHeader from "./layout-sections/MainHeader";
 import MainSideBar from "./layout-sections/MainSideBar";
-import { MenuContext } from "../../context/MenuContext";
+import { MenuContext } from "../../context/MenuContext"; 
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
 	const context = useContext(MenuContext);
@@ -24,7 +24,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
 				<MainHeader />
 				<main className="flex-1 overflow-y-auto  rounded-xl ml-3 mr-3 bg-white lg:ml-64">
 					{children}
-				</main>
+				</main> 
 			</div>
 		</div>
 	);
